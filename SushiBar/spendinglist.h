@@ -1,6 +1,8 @@
 #ifndef SPENDINGLIST_H
 #define SPENDINGLIST_H
 
+#include "spending.h"
+#include "landlord.h"
 
 //Класс записей о затратах
 //Класс записей о затратах

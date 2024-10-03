@@ -1,7 +1,8 @@
 #ifndef USERINTERFACE_H
 #define USERINTERFACE_H
 
-
+#include "spendinginputscreen.h"
+#include "annualreport.h"
 //Главный класс для запуска приложения:
 //этот класс определяет взаимодействие юзера с программой.
 class UserInterface
