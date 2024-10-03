@@ -1,9 +1,6 @@
 #ifndef SPENDINGLIST_H
 #define SPENDINGLIST_H
 
-<<<<<<< HEAD
-
-=======
 #include "spending.h"
 #include "landlord.h"
 
@@ -20,5 +17,4 @@ class ExpenseRecord
         void display();
     float displaySummary(); // нужно для годового отчета
 };
->>>>>>> Ivan
 #endif // SPENDINGLIST_H
