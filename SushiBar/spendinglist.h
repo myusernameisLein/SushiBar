@@ -1,0 +1,5 @@
+#ifndef SPENDINGLIST_H
+#define SPENDINGLIST_H
+
+
+#endif // SPENDINGLIST_H
