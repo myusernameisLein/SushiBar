@@ -1,4 +1,6 @@
 #include "userinterface.h"
+#include <landlord.h>
+#include <globalmethods.h>
 
 UserInterface::UserInterface()
 {

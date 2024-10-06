@@ -1,7 +1,3 @@
 #include "spending.h"
-
-spending::spending()
-{
-
-}
+#include "landlord.h"
 

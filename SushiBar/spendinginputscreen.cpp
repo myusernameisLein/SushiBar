@@ -1,4 +1,5 @@
 #include <spendinginputscreen.h>
+#include "globalmethods.h"
 
 // конструктор
 ExpenseInputScreen::ExpenseInputScreen(ExpenseRecord* per) : ptrExpenseRecord(per)

@@ -2,7 +2,8 @@
 #define ANNUALREPORT_H
 
 #include "landlord.h"
-
+#include "rentrecord.h"
+#include "spendinginputscreen.h"
 //Класс годового отчета
 class AnnualReport
 {
