@@ -17,10 +17,10 @@ vectPtrsExpenses.push_back(ptrExp);
 //---------------------------------------------------------
 void ExpenseRecord::display() // распечатываем все расходы
 {
-cout << "\nДата\tПолучатель\tСумма\tКатегория\n"
+cout << "\nDate\tRecipient\tAmount\tCategory\n"
 << "----------------------------------------\n" << endl;
 if (vectPtrsExpenses.size() == 0) // В контейнере нет расходов
-cout << "***Расходов нет***\n" << endl;
+cout << "***No spendings***\n" << endl;
 else
 {
 iter = vectPtrsExpenses.begin();
@@ -40,7 +40,7 @@ float ExpenseRecord::displaySummary()
 float totalExpenses = 0; // Сумма по всем категориям расходов
 if (vectPtrsExpenses.size() == 0)
 {
-cout << "\tВсе категории\t0\n";
+cout << "\tAll categories\t0\n";
 return 0;
 }
 iter = vectPtrsExpenses.begin();

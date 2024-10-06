@@ -13,7 +13,8 @@ class goodsInputScreen
     private:
     goodsList* ptrgoodsList;
     string tName;
-    string aptNo;
+    string Fsort;
+    int aptNo;
     public:
     goodsInputScreen(goodsList* ptrGD) : ptrgoodsList(ptrGD)
     {

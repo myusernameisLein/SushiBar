@@ -16,9 +16,9 @@ void goodsList::insertgoods(goods* ptrG)
 setPtrsgoods.push_back(ptrG); // вставка нового жильца в список
 }
 //---------------------------------------------------------
-string goodsList::getAptNo(string tName) // получить номер апартаментов по имени жильца
+int goodsList::getAptNo(string tName) // получить номер апартаментов по имени жильца
 {
-    string aptNo;
+    int aptNo;
     iter = setPtrsgoods.begin();
     while (iter != setPtrsgoods.end())
     { // поиск жильца в списке (достаем у каждого жильца номер апартаментов)
@@ -31,21 +31,21 @@ string goodsList::getAptNo(string tName) // получить номер апар
 }
     iter++;
 }
-return "no"; // если нет - возвращаем -1
+return -1; // если нет - возвращаем -1
 }
 //--------------------------------------------------------
 
 void goodsList::display() // вывод списка жильцов
 {
-    cout << "\nApt#\tFood type\n-------------------\n";
+    cout << "\nFoodName\tFoodSort\tPrice#\n------------------------------------------------------\n";
     if (setPtrsgoods.empty()) // если список жильцов пуст
-    cout << "***Нет жильцов***\n" << endl; // выводим запись, что он пуст)
+    cout << "***Nothing here***\n" << endl; // выводим запись, что он пуст)
     else
     {
     iter = setPtrsgoods.begin();
     while (iter != setPtrsgoods.end()) // распечатываем всех жильцов
     {
-    cout << (*iter)->getAptNumber() << " || " << (*iter)->getName() << endl;
+    cout << (*iter)->getName() <<  "\t||\t" << (*iter)->getSort()<< "\t||\t " << (*iter)->getAptNumber()  << endl;
     *iter++;
     }
     }

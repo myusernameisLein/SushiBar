@@ -1,6 +1,6 @@
 #include "goods.h"
 
-goods::goods(string n, string aNo) : name(n), aptNumber(aNo)
+goods::goods(string n, string s, int aNo) : name(n), sort(s), aptNumber(aNo)
 {
 /* тут пусто */
 }
@@ -12,7 +12,7 @@ goods::~goods() // деструктор
 }
 
 //---------------------------------------------------------
-string goods::getAptNumber() //геттер возвращает номер комнаты жильца
+int goods::getAptNumber() //геттер возвращает номер комнаты жильца
 {
 return aptNumber;
 }
@@ -21,5 +21,11 @@ return aptNumber;
 string goods::getName() //геттер возвращает имя жильца
 {
 return name;
+}
+//---------------------------------------------------------
+
+string goods::getSort() //геттер возвращает имя жильца
+{
+return sort;
 }
 //---------------------------------------------------------

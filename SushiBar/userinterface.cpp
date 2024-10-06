@@ -22,12 +22,12 @@ while (true)
 {
 cout << "Input information'i', \n"
 << "Output report 'd', \n"
-<< " Quit 'q': \n";
+<< "Quit 'q': \n";
 ch = getaChar();
 if (ch == 'i') // ввод данных
 {
-cout << " press to add food 't', \n"
-<< " for food price 'r', \n"
+cout << "press to add food 't', \n"
+<< " for income 'r', \n"
 << " For expense 'e': \n";
 ch = getaChar();
 switch (ch)

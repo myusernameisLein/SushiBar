@@ -13,7 +13,6 @@ SOURCES += main.cpp \
     income.cpp \
     incomelist.cpp \
     incomeinputscreen.cpp \
-    spending.cpp \
     spendinglist.cpp \
     spendinginputscreen.cpp \
     userinterface.cpp

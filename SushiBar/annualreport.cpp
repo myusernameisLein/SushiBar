@@ -7,15 +7,15 @@ AnnualReport::AnnualReport(IncomeList* pInc, ExpenseRecord* pER) : ptrInc(pInc),
     //---------------------------------------------------------
 void AnnualReport::display()
     {
-        cout << "Годовой отчет\n--------------\n" << endl;
-        cout << "Доходы\n" << endl;
-        cout << "\tАрендная плата:\t\t";
+        cout << "Annual report\n--------------\n" << endl;
+        cout << "Income\n" << endl;
+        cout << "\tIncome:\t\t";
         rents = ptrInc->getSumOfIncome();
         cout << rents << endl;
-        cout << "Расходы\n" << endl;
+        cout << "Expenses\n" << endl;
         expenses = ptrER->displaySummary();
-        cout << "Расходы всего:\t\t";
+        cout << "Total expenses:\t\t";
         cout << expenses << endl;
         // вычисляем прибыльность
-        cout << "\nБаланс:\t\t\t" << (rents - expenses) << endl;
+        cout << "\nBalance:\t\t\t" << (rents - expenses) << endl;
 }

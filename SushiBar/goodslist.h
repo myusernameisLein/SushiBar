@@ -18,7 +18,7 @@ class goodsList
     public:
     ~goodsList(); // деструктор (удаление жильцов)
     void insertgoods(goods*); // добавить жильца в список
-    string getAptNo(string); // возвращает номер апартаментов
+    int getAptNo(string); // возвращает номер апартаментов
     void display(); // вывод списка жильцов
 };
 

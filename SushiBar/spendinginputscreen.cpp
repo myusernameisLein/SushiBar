@@ -12,17 +12,17 @@ void ExpenseInputScreen::setExpense()
 int month, day;
 string category, payee;
 float amount;
-cout << "Введите месяц (1-12): ";
+cout << "Input month (1-12): ";
 cin >> month;
 cin.ignore(80, '\n');
-cout << "Введите день (1-31): ";
+cout << "Input day(1-31): ";
 cin >> day;
 cin.ignore(80, '\n');
-cout << "Введите категорию расходов (Ремонт, Налоги): ";
+cout << "Input category (Taxes, Repair, Producer): ";
 getaLine(category);
-cout << "Введите получателя (ПростоквашиноЭлектроСбыт): ";
+cout << "Input poluchatelya (Makfa): ";
 getaLine(payee);
-cout << "Введите сумму (39.95): ";
+cout << "Input amout (39.95): ";
 cin >> amount;
 cin.ignore(80, '\n');
 // создаем новый расход
