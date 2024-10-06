@@ -16,13 +16,7 @@ SOURCES += main.cpp \
     spending.cpp \
     spendinglist.cpp \
     spendinginputscreen.cpp \
-    userinterface.cpp \
-    tenant.cpp \
-    tenantinputscreen.cpp \
-    tenantlist.cpp \
-    rentrow.cpp \
-    rentrecord.cpp \
-    rentinputscreen.cpp
+    userinterface.cpp
 
 include(deployment.pri)
 qtcAddDeployment()
@@ -40,11 +34,5 @@ HEADERS += \
     spending.h \
     spendinglist.h \
     spendinginputscreen.h \
-    userinterface.h \
-    tenant.h \
-    tenantinputscreen.h \
-    tenantlist.h \
-    rentrow.h \
-    rentrecord.h \
-    rentinputscreen.h
+    userinterface.h
 
