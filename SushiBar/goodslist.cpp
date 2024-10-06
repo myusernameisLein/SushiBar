@@ -1,53 +1,53 @@
 #include "goodslist.h"
 
-////////////////методы класса TenantList///////////////////
-TenantList::~TenantList() // деструктор
+////////////////методы класса goodsList///////////////////
+goodsList::~goodsList() // деструктор
 {
-while (!setPtrsTens.empty()) // удаление всех жильцов,
+while (!setPtrsgoods.empty()) // удаление всех жильцов,
 { // удаление указателей из контейнера
-iter = setPtrsTens.begin();
+iter = setPtrsgoods.begin();
 delete *iter;
-setPtrsTens.erase(iter);
+setPtrsgoods.erase(iter);
 }
 }
 //---------------------------------------------------------
-void TenantList::insertTenant(Tenant* ptrT)
+void goodsList::insertgoods(goods* ptrG)
 {
-setPtrsTens.push_back(ptrT); // вставка нового жильца в список
+setPtrsgoods.push_back(ptrG); // вставка нового жильца в список
 }
 //---------------------------------------------------------
-int TenantList::getAptNo(string tName) // получить номер апартаментов по имени жильца
+string goodsList::getAptNo(string tName) // получить номер апартаментов по имени жильца
 {
-int aptNo;
-iter = setPtrsTens.begin();
-while (iter != setPtrsTens.end())
-{ // поиск жильца в списке (достаем у каждого жильца номер апартаментов)
-aptNo = (*iter)->getAptNumber();
-if (tName == ((*iter)->getName())) // сравниваем по именам и
-{
-// если получившаяся пара совпадает - значит,
-//мы нашли запись об этом жильце в списке, в этом случае
-return aptNo; // возвращаем номер его апартаментов
+    string aptNo;
+    iter = setPtrsgoods.begin();
+    while (iter != setPtrsgoods.end())
+    { // поиск жильца в списке (достаем у каждого жильца номер апартаментов)
+    aptNo = (*iter)->getAptNumber();
+    if (tName == ((*iter)->getName())) // сравниваем по именам и
+    {
+    // если получившаяся пара совпадает - значит,
+    //мы нашли запись об этом жильце в списке, в этом случае
+    return aptNo; // возвращаем номер его апартаментов
 }
-iter++;
+    iter++;
 }
-return -1; // если нет - возвращаем -1
+return "no"; // если нет - возвращаем -1
 }
 //--------------------------------------------------------
 
-void TenantList::display() // вывод списка жильцов
+void goodsList::display() // вывод списка жильцов
 {
-cout << "\nApt#\tИмя жильца\n-------------------\n";
-if (setPtrsTens.empty()) // если список жильцов пуст
-cout << "***Нет жильцов***\n" << endl; // выводим запись, что он пуст)
-else
-{
-iter = setPtrsTens.begin();
-while (iter != setPtrsTens.end()) // распечатываем всех жильцов
-{
-cout << (*iter)->getAptNumber() << " || " << (*iter)->getName() << endl;
-*iter++;
-}
-}
+    cout << "\nApt#\tFood type\n-------------------\n";
+    if (setPtrsgoods.empty()) // если список жильцов пуст
+    cout << "***Нет жильцов***\n" << endl; // выводим запись, что он пуст)
+    else
+    {
+    iter = setPtrsgoods.begin();
+    while (iter != setPtrsgoods.end()) // распечатываем всех жильцов
+    {
+    cout << (*iter)->getAptNumber() << " || " << (*iter)->getName() << endl;
+    *iter++;
+    }
+    }
 }
 //---------------------------------------------------------

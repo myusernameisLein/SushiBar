@@ -11,10 +11,10 @@
 class UserInterface
 {
     private:
-        TenantList* ptrTenantList;
-        TenantInputScreen* ptrTenantInputScreen;
-        RentRecord* ptrRentRecord;
-        RentInputScreen* ptrRentInputScreen;
+        goodsList* ptrgoodsList;
+        goodsInputScreen* ptrgoodsInputScreen;
+        IncomeList* ptrIncomeList;
+        IncomeInputScreen* ptrIncomeInputScreen;
         ExpenseRecord* ptrExpenseRecord;
         ExpenseInputScreen* ptrExpenseInputScreen;
         AnnualReport* ptrAnnualReport;

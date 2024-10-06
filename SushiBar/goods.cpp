@@ -1,21 +1,24 @@
 #include "goods.h"
 
-Tenant::Tenant(string n, int aNo) : name(n), aptNumber(aNo)
+goods::goods(string n, string aNo) : name(n), aptNumber(aNo)
 {
 /* тут пусто */
 }
 //---------------------------------------------------------
-Tenant::~Tenant() // деструктор
+
+goods::~goods() // деструктор
 {
 /* тут тоже пусто */
 }
+
 //---------------------------------------------------------
-int Tenant::getAptNumber() //геттер возвращает номер комнаты жильца
+string goods::getAptNumber() //геттер возвращает номер комнаты жильца
 {
 return aptNumber;
 }
 //--------------------------------------------------------
-string Tenant::getName() //геттер возвращает имя жильца
+
+string goods::getName() //геттер возвращает имя жильца
 {
 return name;
 }

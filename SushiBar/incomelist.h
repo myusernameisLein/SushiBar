@@ -1,24 +1,22 @@
-#ifndef INCOMELIST_H
-#define INCOMELIST_H
+#ifndef IncomeListLIST_H
+#define IncomeListLIST_H
 
 #include "landlord.h"
+#include "income.h"
 
-
-////////////////////класс RentRow//////////////////////////
-//класс, хранящий одну табличную строку доходов (уплаченной ренты)
-// одна строка таблицы прибыли: адрес и 12 месячных оплат
-class RentRow
+//////////////////// класс IncomeList///////////////////////
+//класс IncomeList. Он хранит непосредственно записи об арендной плате.
+//С ним будет взаимодействовать экран добавления арендной платы.
+class IncomeList
 {
 private:
-int aptNo; // апартаменты, за которые уплачено
-float rent[12]; // месяцы
-public:
-RentRow(int); // конструктор с одним параметром
-void setRent(int, float); // добавить ренту за месяц
-//сумма платежей из одной строки (плата одного жильца за все месяцы)
-float getSumOfRow();
-int getAptNo(); //Запрос номера апартаментов
-float getRentNo(int); //Запрос ренты за месяц int
+    list <Income*> setPtrsInc; // указатели на объекты Income (по одному на жильца)
+    list <Income*>::iterator iter;
+    public:
+    ~IncomeList();
+    void insertIncomeList(int, int, float); // добавить ренту
+    void display(); // отобразить все строки с рентами
+    float getSumOfIncome(); // подсчитать сумму всех платежей всех жильцов
 };
 
-#endif // INCOMELIST_H
+#endif // IncomeList_H

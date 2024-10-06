@@ -3,22 +3,22 @@
 
 
 #include "landlord.h"
-#include "incomelist.h"
 
-
-//////////////////// класс RentRecord ///////////////////////
-//класс RentRecord. Он хранит непосредственно записи об арендной плате.
-//С ним будет взаимодействовать экран добавления арендной платы.
-class RentRecord
+////////////////////класс Income//////////////////////////
+//класс, хранящий одну табличную строку доходов (уплаченной ренты)
+// одна строка таблицы прибыли: адрес и 12 месячных оплат
+class Income
 {
 private:
-list <RentRow*> setPtrsRR; // указатели на объекты rentRow (по одному на жильца)
-list <RentRow*>::iterator iter;
-public:
-~RentRecord();
-void insertRent(int, int, float); // добавить ренту
-void display(); // отобразить все строки с рентами
-float getSumOfRents(); // подсчитать сумму всех платежей всех жильцов
+    int aptNo; // апартаменты, за которые уплачено
+    float income[12]; // месяцы
+    public:
+    Income(int); // конструктор с одним параметром
+    void setIncome(int, float); // добавить ренту за месяц
+    //сумма платежей из одной строки (плата одного жильца за все месяцы)
+    float getSumOfIncome();
+    int getAptNo(); //Запрос номера апартаментов
+    float getIncomeNo(int); //Запрос ренты за месяц int
 };
 
-#endif // INCOME_H
+#endif // Income_H

@@ -2,29 +2,28 @@
 #define INCOMEINPUTSCREEN_H
 
 #include "landlord.h"
-#include "income.h"
-#include "incomeinputscreen.h"
+#include "incomelist.h"
 #include <goodslist.h>
 
 
-////////////////////класс RentInputScreen //////////////////
+////////////////////класс IncomeInputScreen //////////////////
 //Экран для добавления ренты
-class RentInputScreen
+class IncomeInputScreen
 {
-private:
-TenantList* ptrTenantList; // список жильцов
-RentRecord* ptrRentRecord; // список записей об оплате
-string renterName; // имя жильца, который платит ренту
-float rentPaid; // рента
-int month; // за месяц
-int aptNo; // по апартаментам
-public:
-RentInputScreen(TenantList* ptrTL, RentRecord* ptrRR) : ptrTenantList(ptrTL),
-ptrRentRecord(ptrRR)
-{
-/*тут пусто*/
-}
-void setRent(); // добавить арендную плату одного жильца за месяц
+    private:
+    goodsList* ptrgoodsList; // список жильцов
+    IncomeList* ptrIncomeList; // список записей об оплате
+    string IncomeName; // имя жильца, который платит ренту
+    float IncomePaid; // рента
+    int month; // за месяц
+    int aptNo; // по апартаментам
+    public:
+    IncomeInputScreen(goodsList* ptrGD, IncomeList* ptrInc) : ptrgoodsList(ptrGD),
+    ptrIncomeList(ptrInc)
+    {
+    /*тут пусто*/
+    }
+    void setIncome(); // добавить арендную плату одного жильца за месяц
 };
 
 

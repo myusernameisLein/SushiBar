@@ -8,18 +8,18 @@
 ////////////////класс TenantInputScreen////////////////////
 //класс TenantInputScreen. Это класс, отвечающий за отображение «экрана»,
 //куда пользователь может ввести данные о новом жильце:
-class TenantInputScreen
+class goodsInputScreen
 {
-private:
-TenantList* ptrTenantList;
-string tName;
-int aptNo;
-public:
-TenantInputScreen(TenantList* ptrTL) : ptrTenantList(ptrTL)
-{
-/* тут пусто */
-}
-void setTenant(); // добавить данные о жильце
+    private:
+    goodsList* ptrgoodsList;
+    string tName;
+    string aptNo;
+    public:
+    goodsInputScreen(goodsList* ptrGD) : ptrgoodsList(ptrGD)
+    {
+    /* тут пусто */
+    }
+    void setgoods(); // добавить данные о жильце
 };
 
 #endif // GOODSINPUTSCREEN_H

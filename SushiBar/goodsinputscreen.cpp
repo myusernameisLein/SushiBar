@@ -2,15 +2,15 @@
 
 #include <globalmethods.h>
 
-///////////метод класса TenantInputScreen//////////////////
-void TenantInputScreen::setTenant() // добавить данные о жильце
+///////////метод класса goodsInputScreen//////////////////
+void goodsInputScreen::setgoods() // добавить данные о жильце
 {
-cout << "Введите имя жильца (Дядя Федор): " << endl;
-getaLine(tName);
-cout << "Введите номер комнаты (101): " << endl;
-cin >> aptNo;
-cin.ignore(80, '\n');
-Tenant* ptrTenant = new Tenant(tName, aptNo); // создать жильца
-ptrTenantList->insertTenant(ptrTenant); // занести в список жильцов
+    cout << "Input type of food: " << endl;
+    getaLine(tName);
+    cout << "Input sorf of food " << endl;
+    cin >> aptNo;
+    cin.ignore(80, '\n');
+    goods* ptrgoods = new goods(tName, aptNo); // создать жильца
+    ptrgoodsList->insertgoods(ptrgoods); // занести в список жильцов
 }
 //---------------------------------------------------------

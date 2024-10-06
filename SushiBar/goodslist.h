@@ -9,17 +9,17 @@
 //класс TenantList — список всех жильцов.
 //Он содержит множество указателей на класс Tenant
 // и оперирует ими при выводе
-class TenantList
+class goodsList
 {
-private:
-// установить указатели на жильцов
-list <Tenant*> setPtrsTens; // указатели на класс жильцов
-list <Tenant*>::iterator iter; //итератор
-public:
-~TenantList(); // деструктор (удаление жильцов)
-void insertTenant(Tenant*); // добавить жильца в список
-int getAptNo(string); // возвращает номер апартаментов
-void display(); // вывод списка жильцов
+    private:
+    // установить указатели на жильцов
+    list <goods*> setPtrsgoods; // указатели на класс жильцов
+    list <goods*>::iterator iter; //итератор
+    public:
+    ~goodsList(); // деструктор (удаление жильцов)
+    void insertgoods(goods*); // добавить жильца в список
+    string getAptNo(string); // возвращает номер апартаментов
+    void display(); // вывод списка жильцов
 };
 
 #endif // GOODSLIST_H

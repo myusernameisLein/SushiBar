@@ -1,71 +1,33 @@
 #include "income.h"
 
-/////////////////методы класса rentRecord//////////////////
-RentRecord::~RentRecord() // деструктор
-{ // удалить строки с платежами,
-// удалить указатели из множества.
-while (!setPtrsRR.empty())
-{
-iter = setPtrsRR.begin();
-delete *iter;
-setPtrsRR.erase(iter);
-}
+/////////////////методы класса Income/////////////////////
+Income::Income(int an) : aptNo(an) //конструктор
+{ //Алгоритм fill() помещает копию значения value (у нас это 0)
+//в каждый элемент диапазона, ограниченного парой итераторов [first,last).
+//Т.е. в конструкторе просто инициализируем массив значениями 0.
+fill(&income[0], &income[12], 0);
 }
 //---------------------------------------------------------
-void RentRecord::insertRent(int aptNo, int month, float amount)
+void Income::setIncome(int m, float am) // сеттер оплата за месяц m, сумма - am
 {
-iter = setPtrsRR.begin(); // Инициализация итератора
-while (iter != setPtrsRR.end()) // условие выхода
-{ // если текущий объект совпадает с созданным для поиска,
-if (aptNo == (*iter)->getAptNo())
-{ // заносим ренту в список
-(*iter)->setRent(month, amount);
-return;
-}
-else
-iter++;
-} // если не нашли строку - создаем новую
-RentRow* ptrRow = new RentRow(aptNo);
-ptrRow->setRent(month, amount); // заносим в нее платеж
-setPtrsRR.push_back(ptrRow); // заносим строку в вектор
+income[m] = am; // привязываем оплату к месяцу
 }
 //---------------------------------------------------------
-void RentRecord::display() // отобразить все строки с рентами
+int Income::getAptNo() // геттер запрос номера апартаментов
 {
-cout << "\nAptNo\tЯнв Фев Мар Апр Май Июн Июл Авг Сен Окт Ноя Дек\n" << endl
-<< "------------------------------------------------------------------\n" << endl;
-if (setPtrsRR.empty())
-cout << "***Нет платежей!***\n" << endl;
-else
-{
-iter = setPtrsRR.begin(); //итератор на список с указателями на объекты rentRow
-while (iter != setPtrsRR.end())
-{
-cout << (*iter)->getAptNo() << '\t'; // вывести номер комнаты
-for (int j = 0; j < 12; j++) // вывести 12 арендных платежей
-{
-if (((*iter)->getRentNo(j)) == 0)
-cout << " 0 ";
-else
-cout << (*iter)->getRentNo(j) << " ";
-}
-cout << endl;
-iter++;
-}
-cout << endl;
-cout << endl;
-}
+return aptNo;
 }
 //---------------------------------------------------------
-float RentRecord::getSumOfRents() // сумма всех платежей
+float Income::getIncomeNo(int month) //Геттер запрос ренты за месяц month
 {
-float sumRents = 0.0;
-iter = setPtrsRR.begin();
-while (iter != setPtrsRR.end())
-{ // плюсуем суммы всех платежей жильцов за все время
-sumRents += (*iter)->getSumOfRow();
-iter++;
-}
-return sumRents;
+    return income[month];
 }
 //---------------------------------------------------------
+float Income::getSumOfIncome() // cумма арендных платежей в строке
+{ //По умолчанию алгоритм accumulate() суммирует элементы.
+ //Нужно указать точку старта, конечную точку и значение от которого начинаем прибавлять.
+ //Чаще всего это ноль, но может быть и результат других вычислений.
+return accumulate(&income[0], &income[12], 0);
+}
+//---------------------------------------------------------
+
