@@ -1,8 +1,7 @@
 #ifndef SPENDINGINPUTSCREEN_H
 #define SPENDINGINPUTSCREEN_H
 
-<<<<<<< HEAD
-=======
+
 #include "spendinglist.h"
 
 //Класс для ввода расходов
@@ -14,6 +13,5 @@ class ExpenseInputScreen
         ExpenseInputScreen(ExpenseRecord*);
     void setExpense();
 };
->>>>>>> Ivan
 
 #endif // SPENDINGINPUTSCREEN_H

@@ -1,11 +1,16 @@
 // lordApp.cpp
 #include "landlord.h"
+#include "userinterface.h"
+
+
 int main()
 {
-//Функция setlocale() задаёт локализацию программы.
-setlocale(LC_ALL, "rus");
-UserInterface theUserInterface;
-theUserInterface.interact();
-return 0;
+
+    setlocale(LC_ALL, "rus");
+    UserInterface theUserInterface;
+    theUserInterface.interact();
+
+    system("pause");
+    return 0;
 }
-////////////////////конец файла lordApp.cpp///////////////
+

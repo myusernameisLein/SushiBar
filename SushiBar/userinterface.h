@@ -1,5 +1,8 @@
 #ifndef USERINTERFACE_H
 #define USERINTERFACE_H
+#include "goodslist.h"
+#include "goodsinputscreen.h"
+#include "incomeinputscreen.h"
 
 #include "spendinginputscreen.h"
 #include "annualreport.h"

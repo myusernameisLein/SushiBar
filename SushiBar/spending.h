@@ -1,9 +1,6 @@
 #ifndef SPENDING_H
 #define SPENDING_H
-
-<<<<<<< HEAD
-
-=======
+#include "landlord.h"
 //Класс затрат
 class Expense
 {
@@ -20,5 +17,4 @@ class Expense
         /* тут пусто! */
     }
 };
->>>>>>> Ivan
 #endif // SPENDING_H
