@@ -6,14 +6,14 @@
 
 //Класс записей о затратах
 //Класс записей о затратах
-class ExpenseRecord
+class SpendingList
 {
     private:
-        vector<Expense*> vectPtrsExpenses; //вектор указателей на расходы
-        vector<Expense*>::iterator iter;
+        vector<Spending*> vectPtrsSpendings; //вектор указателей на расходы
+        vector<Spending*>::iterator iter;
     public:
-        ~ExpenseRecord();
-        void insertExp(Expense*);
+        ~SpendingList();
+        void insertSpend(Spending*);
         void display();
     float displaySummary(); // нужно для годового отчета
 };

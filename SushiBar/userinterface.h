@@ -15,8 +15,8 @@ class UserInterface
         goodsInputScreen* ptrgoodsInputScreen;
         IncomeList* ptrIncomeList;
         IncomeInputScreen* ptrIncomeInputScreen;
-        ExpenseRecord* ptrExpenseRecord;
-        ExpenseInputScreen* ptrExpenseInputScreen;
+        SpendingList* ptrSpendingList;
+        SpendingInputScreen* ptrSpendingInputScreen;
         AnnualReport* ptrAnnualReport;
     char ch;
     public:

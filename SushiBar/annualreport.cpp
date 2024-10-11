@@ -1,7 +1,7 @@
 #include "annualreport.h"
 
 //Конструктор
-AnnualReport::AnnualReport(IncomeList* pInc, ExpenseRecord* pER) : ptrInc(pInc), ptrER(pER)
+AnnualReport::AnnualReport(IncomeList* pInc, SpendingList* pSp) : ptrInc(pInc), ptrSp(pSp)
     { /* пусто */
     }
     //---------------------------------------------------------
@@ -13,9 +13,9 @@ void AnnualReport::display()
         rents = ptrInc->getSumOfIncome();
         cout << rents << endl;
         cout << "Expenses\n" << endl;
-        expenses = ptrER->displaySummary();
+        spends = ptrSp->displaySummary();
         cout << "Total expenses:\t\t";
-        cout << expenses << endl;
+        cout << spends << endl;
         // вычисляем прибыльность
-        cout << "\nBalance:\t\t\t" << (rents - expenses) << endl;
+        cout << "\nBalance:\t\t\t" << (rents - spends) << endl;
 }

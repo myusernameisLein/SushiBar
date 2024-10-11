@@ -6,14 +6,14 @@ UserInterface::UserInterface()
 {
 ptrgoodsList = new goodsList;
 ptrIncomeList= new IncomeList;
-ptrExpenseRecord = new ExpenseRecord;
+ptrSpendingList = new SpendingList;
 }
 //---------------------------------------------------------
 UserInterface::~UserInterface()
 {
 delete ptrgoodsList;
 delete ptrIncomeList;
-delete ptrExpenseRecord;
+delete ptrSpendingList;
 }
 //---------------------------------------------------------
 void UserInterface::interact()
@@ -28,7 +28,7 @@ if (ch == 'i') // ввод данных
 {
 cout << "press to add food 't', \n"
 << " for income 'r', \n"
-<< " For expense 'e': \n";
+<< " For Spending 'e': \n";
 ch = getaChar();
 switch (ch)
 {
@@ -44,10 +44,10 @@ new IncomeInputScreen(ptrgoodsList, ptrIncomeList);
 ptrIncomeInputScreen->setIncome();
 delete ptrIncomeInputScreen;
 break;
-case 'e': ptrExpenseInputScreen =
-new ExpenseInputScreen(ptrExpenseRecord);
-ptrExpenseInputScreen->setExpense();
-delete ptrExpenseInputScreen;
+case 'e': ptrSpendingInputScreen =
+new SpendingInputScreen(ptrSpendingList);
+ptrSpendingInputScreen->setSpending();
+delete ptrSpendingInputScreen;
 break;
 default: cout << "Unknown function\n";
 break;
@@ -57,7 +57,7 @@ else if (ch == 'd') // вывод данных
 {
 cout << "Press to output food type 't', \n"
 << " For price 'r' \n"
-<< " For expense 'e', \n"
+<< " For Spending 'e', \n"
 << "For year report 'a': \n";
 ch = getaChar();
 switch (ch)
@@ -66,11 +66,11 @@ case 't': ptrgoodsList->display();
 break;
 case 'r': ptrIncomeList->display();
 break;
-case 'e': ptrExpenseRecord->display();
+case 'e': ptrSpendingList->display();
 break;
 case 'a':
 ptrAnnualReport = new AnnualReport(ptrIncomeList,
-ptrExpenseRecord);
+ptrSpendingList);
 ptrAnnualReport->display();
 delete ptrAnnualReport;
 break;

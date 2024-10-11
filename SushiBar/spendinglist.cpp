@@ -1,30 +1,30 @@
 #include "spendinglist.h"
-ExpenseRecord::~ExpenseRecord() // деструктор
-{ // удалить объекты expense
+SpendingList::~SpendingList() // деструктор
+{ // удалить объекты Spending
 // удалить указатели на вектор
-while (!vectPtrsExpenses.empty())
+while (!vectPtrsSpendings.empty())
 {
-iter = vectPtrsExpenses.begin();
+iter = vectPtrsSpendings.begin();
 delete *iter;
-vectPtrsExpenses.erase(iter);
+vectPtrsSpendings.erase(iter);
 }
 }
 //--------------------------------------------------------
-void ExpenseRecord::insertExp(Expense* ptrExp)
+void SpendingList::insertSpend(Spending* ptrSpend)
 {
-vectPtrsExpenses.push_back(ptrExp);
+vectPtrsSpendings.push_back(ptrSpend);
 }
 //---------------------------------------------------------
-void ExpenseRecord::display() // распечатываем все расходы
+void SpendingList::display() // распечатываем все расходы
 {
 cout << "\nDate\tRecipient\tAmount\tCategory\n"
 << "----------------------------------------\n" << endl;
-if (vectPtrsExpenses.size() == 0) // В контейнере нет расходов
+if (vectPtrsSpendings.size() == 0) // В контейнере нет расходов
 cout << "***No spendings***\n" << endl;
 else
 {
-iter = vectPtrsExpenses.begin();
-while (iter != vectPtrsExpenses.end())
+iter = vectPtrsSpendings.begin();
+while (iter != vectPtrsSpendings.end())
 { // распечатываем все расходы
  cout << (*iter)->month << '/' << (*iter)->day << '\t' << (*iter)->payee << '\t' << '\t';
  cout << (*iter)->amount << '\t' << (*iter)->category << endl;
@@ -35,22 +35,22 @@ cout << endl;
 }
 //--------------------------------------------------------
 // используется при составлении годового отчета
-float ExpenseRecord::displaySummary()
+float SpendingList::displaySummary()
 {
-float totalExpenses = 0; // Сумма по всем категориям расходов
-if (vectPtrsExpenses.size() == 0)
+float totalSpendings = 0; // Сумма по всем категориям расходов
+if (vectPtrsSpendings.size() == 0)
 {
 cout << "\tAll categories\t0\n";
 return 0;
 }
-iter = vectPtrsExpenses.begin();
-while (iter != vectPtrsExpenses.end())
+iter = vectPtrsSpendings.begin();
+while (iter != vectPtrsSpendings.end())
 {
 //выводим на экран категории расходов
 cout << '\t' << ((*iter)->category) << '\t' << ((*iter)->amount) << endl;
-totalExpenses += (*iter)->amount; //подсчитываем все расходы
+totalSpendings += (*iter)->amount; //подсчитываем все расходы
 iter++;
 }
-return totalExpenses;
+return totalSpendings;
 }
 //--------------------------------------------------------

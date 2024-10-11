@@ -5,13 +5,13 @@
 #include "spendinglist.h"
 
 //Класс для ввода расходов
-class ExpenseInputScreen
+class SpendingInputScreen
 {
     private:
-        ExpenseRecord* ptrExpenseRecord; // запись о расходах
+        SpendingList* ptrSpendingList; // запись о расходах
     public:
-        ExpenseInputScreen(ExpenseRecord*);
-    void setExpense();
+        SpendingInputScreen(SpendingList*);
+    void setSpending();
 };
 
 #endif // SPENDINGINPUTSCREEN_H

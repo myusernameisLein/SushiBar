@@ -10,10 +10,10 @@ class AnnualReport
 {
     private:
         IncomeList* ptrInc; // записи доходов
-        ExpenseRecord* ptrER; // записи расходов
-        float expenses, rents; // суммы доходов и расходов
+        SpendingList* ptrSp; // записи расходов
+        float spends, rents; // суммы доходов и расходов
     public:
-        AnnualReport(IncomeList*, ExpenseRecord*);
+        AnnualReport(IncomeList*, SpendingList*);
     void display(); // отображение годового отчета
 };
 
