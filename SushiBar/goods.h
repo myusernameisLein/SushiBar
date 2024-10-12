@@ -21,5 +21,6 @@ class goods
     int getAptNumber(); //возвращает номер комнаты жильца
     string getName(); //возвращает имя жильца
     string getSort(); //возвращает сорт еды
+    string getSortName();
 };
 #endif // GOODS_H

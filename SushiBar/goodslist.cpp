@@ -16,14 +16,14 @@ void goodsList::insertgoods(goods* ptrG)
 setPtrsgoods.push_back(ptrG); // вставка нового жильца в список
 }
 //---------------------------------------------------------
-int goodsList::getAptNo(string tName) // получить номер апартаментов по имени жильца
+int goodsList::getAptNo(string Fsort) // получить номер апартаментов по имени жильца
 {
     int aptNo;
     iter = setPtrsgoods.begin();
     while (iter != setPtrsgoods.end())
     { // поиск жильца в списке (достаем у каждого жильца номер апартаментов)
     aptNo = (*iter)->getAptNumber();
-    if (tName == ((*iter)->getName())) // сравниваем по именам и
+    if (Fsort == ((*iter)->getSortName())) // сравниваем по именам и
     {
     // если получившаяся пара совпадает - значит,
     //мы нашли запись об этом жильце в списке, в этом случае
@@ -45,9 +45,26 @@ void goodsList::display() // вывод списка жильцов
     iter = setPtrsgoods.begin();
     while (iter != setPtrsgoods.end()) // распечатываем всех жильцов
     {
-    cout << (*iter)->getName() <<  "\t||\t" << (*iter)->getSort()<< "\t||\t " << (*iter)->getAptNumber()  << endl;
+    cout << (*iter)->getName() <<  "\t||\t" << (*iter)->getSortName()<< "\t||\t " << (*iter)->getAptNumber()  << endl;
     *iter++;
     }
     }
 }
 //---------------------------------------------------------
+string goodsList::getSortName(string FSort)
+{
+    string Sort;
+    iter = setPtrsgoods.begin();
+    while (iter != setPtrsgoods.end())
+    { // поиск жильца в списке (достаем у каждого жильца номер апартаментов)
+    Sort = (*iter)->getSortName();
+    if (FSort == ((*iter)->getSortName())) // сравниваем по именам и
+    {
+    // если получившаяся пара совпадает - значит,
+    //мы нашли запись об этом жильце в списке, в этом случае
+    return Sort; // возвращаем номер его апартаментов
+}
+    iter++;
+}
+return "-1"; // если нет - возвращаем -1
+}

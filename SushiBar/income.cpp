@@ -1,7 +1,7 @@
 #include "income.h"
 
 /////////////////методы класса Income/////////////////////
-Income::Income(int an) : aptNo(an) //конструктор
+Income::Income(int an, const string& sortName) : aptNo(an), Sort(sortName) //конструктор
 { //Алгоритм fill() помещает копию значения value (у нас это 0)
 //в каждый элемент диапазона, ограниченного парой итераторов [first,last).
 //Т.е. в конструкторе просто инициализируем массив значениями 0.
@@ -30,4 +30,8 @@ float Income::getSumOfIncome() // cумма арендных платежей в
 return accumulate(&income[0], &income[12], 0);
 }
 //---------------------------------------------------------
+string Income::getSortName()
+{
+    return Sort;
+}
 

@@ -1,6 +1,6 @@
 #include "incomelist.h"
 #include "income.h"
-
+#include "goodslist.h"
 /////////////////методы класса IncomeList//////////////////
 IncomeList::~IncomeList() // деструктор
 { // удалить строки с платежами,
@@ -13,7 +13,7 @@ setPtrsInc.erase(iter);
 }
 }
 //---------------------------------------------------------
-void IncomeList::insertIncomeList(int aptNo, int month, float amount)
+void IncomeList::insertIncomeList(int aptNo, string Sort, int month, float amount)
 {
     iter = setPtrsInc.begin(); // Инициализация итератора
     while (iter != setPtrsInc.end()) // условие выхода
@@ -26,23 +26,23 @@ void IncomeList::insertIncomeList(int aptNo, int month, float amount)
     else
     iter++;
     } // если не нашли строку - создаем новую
-    Income* ptIncow = new Income(aptNo);
+    Income* ptIncow = new Income(aptNo, Sort);
     ptIncow->setIncome(month, amount); // заносим в нее платеж
     setPtrsInc.push_back(ptIncow); // заносим строку в вектор
     }
     //---------------------------------------------------------
     void IncomeList::display() // отобразить все строки с рентами
     {
-    cout << "\nAptNo\tЯнв Фев Мар Апр Май Июн Июл Авг Сен Окт Ноя Дек\n" << endl
+    cout << "\nSort\tJan Feb Mar Apr May Jun Jul Aug Sen Oct Nov Dec\n" << endl
     << "------------------------------------------------------------------\n" << endl;
     if (setPtrsInc.empty())
-    cout << "***Нет платежей!***\n" << endl;
+    cout << "***There is no payments!***\n" << endl;
     else
     {
     iter = setPtrsInc.begin(); //итератор на список с указателями на объекты Income
     while (iter != setPtrsInc.end())
     {
-    cout << (*iter)->getAptNo() << '\t'; // вывести номер комнаты
+    cout << (*iter)->getSortName()<< '\t'; // вывести номер комнаты
     for (int j = 0; j < 12; j++) // вывести 12 арендных платежей
     {
     if (((*iter)->getIncomeNo(j)) == 0)

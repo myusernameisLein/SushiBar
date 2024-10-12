@@ -14,9 +14,10 @@ class IncomeInputScreen
     goodsList* ptrgoodsList; // список жильцов
     IncomeList* ptrIncomeList; // список записей об оплате
     string IncomeName; // имя жильца, который платит ренту
-    float IncomePaid; // рента
+    float SumFood;
     int month; // за месяц
     int aptNo; // по апартаментам
+    string SF;
     public:
     IncomeInputScreen(goodsList* ptrGD, IncomeList* ptrInc) : ptrgoodsList(ptrGD),
     ptrIncomeList(ptrInc)

@@ -14,9 +14,10 @@ private:
     list <Income*>::iterator iter;
     public:
     ~IncomeList();
-    void insertIncomeList(int, int, float); // добавить ренту
+    void insertIncomeList(int, string, int, float); // добавить ренту
     void display(); // отобразить все строки с рентами
     float getSumOfIncome(); // подсчитать сумму всех платежей всех жильцов
+
 };
 
 #endif // IncomeList_H

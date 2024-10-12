@@ -4,23 +4,25 @@
 /////////////////методы класса IncomeInputScreen/////////////
 void IncomeInputScreen::setIncome()
 {
-    cout << "Input sort name: ";
+    cout << "Enter sort name: ";
     getaLine(IncomeName);
     // получить номер апартаментов по имени жильца
     aptNo = ptrgoodsList->getAptNo(IncomeName);
     if (aptNo > 0) // если имя найдено, и такой жилец существует -
     { // получить сумму платежа
-    cout << "Input food price (345.67): " << endl;
-    cin >> IncomePaid; // вводим ренту
+    cout << "Enter amount of food: " << endl;
+    cin >> SumFood; // вводим ренту
+    SumFood = SumFood * aptNo;
     cin.ignore(80, '\n');
-    cout << "Idk(was month): " << endl;
+    cout << "Month: " << endl;
     cin >> month;
     cin.ignore(80, '\n');
+    SF = ptrgoodsList->getSortName(IncomeName);
     month--; // (внутренняя нумерация 0-11)
      // вставляем ренту в запись об оплате
-    ptrIncomeList->insertIncomeList(aptNo, month, IncomePaid);
+    ptrIncomeList->insertIncomeList(aptNo, SF, month, SumFood);
 }
 else
-cout << "Такого жильца нет.\n" << endl;
+cout << "There is no such kind of food.\n" << endl;
 }
 //---------------------------------------------------------

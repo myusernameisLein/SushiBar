@@ -20,6 +20,7 @@ class goodsList
     void insertgoods(goods*); // добавить жильца в список
     int getAptNo(string); // возвращает номер апартаментов
     void display(); // вывод списка жильцов
+    string getSortName(string);
 };
 
 #endif // GOODSLIST_H
