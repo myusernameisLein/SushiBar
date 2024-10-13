@@ -10,9 +10,9 @@ void goodsInputScreen::setgoods() // добавить данные о жильц
     cout << "Enter sort of food" << endl;
     getaLine(Fsort);
     cout << "Enter price of food " << endl;
-    cin >> aptNo;
+    cin >> Fprice;
     cin.ignore(80, '\n');
-    goods* ptrgoods = new goods(tName, Fsort, aptNo); // создать жильца
+    goods* ptrgoods = new goods(tName, Fsort, Fprice); // создать жильца
     ptrgoodsList->insertgoods(ptrgoods); // занести в список жильцов
 }
 //---------------------------------------------------------

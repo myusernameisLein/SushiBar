@@ -10,7 +10,7 @@ Order::Order(const std::string& deliveryAddress)
 // Метод для добавления товара
 void Order::addItem(goods* item) {
     items.push_back(item);  // Добавляем товар в список (указатель)
-    totalCost += item->getAptNumber();  // Добавляем цену товара к общей стоимости
+    totalCost += item->getPriceNumber();  // Добавляем цену товара к общей стоимости
 }
 
 // Метод для отображения информации о заказе
@@ -25,7 +25,7 @@ void Order::display() const {
     for (vector<goods*>::const_iterator it = items.begin(); it != items.end(); ++it) {
         cout << (*it)->getName() << "\t\t" // Имя товара
                   << (*it)->getSortName() << "\t\t" // Категория (Sort)
-                  << (*it)->getAptNumber() << "\n"; // Цена товара
+                  << (*it)->getPriceNumber() << "\n"; // Цена товара
     }
 
     // Подводим итоговую стоимость

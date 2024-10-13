@@ -1,5 +1,3 @@
-
-
 #include "orderlist.h"
 #include "landlord.h"
 

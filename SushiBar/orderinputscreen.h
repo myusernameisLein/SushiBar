@@ -1,7 +1,6 @@
 #ifndef ORDERINPUTSCREEN_H
 #define ORDERINPUTSCREEN_H
 
-#include "landlord.h"
 #include "orderlist.h" // Подключаем OrderList
 #include "goodslist.h" // Подключаем GoodsList
 

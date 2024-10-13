@@ -2,7 +2,7 @@
 #define SPENDINGLIST_H
 
 #include "spending.h"
-#include "landlord.h"
+#include "globalmethods.h"
 
 //Класс записей о затратах
 //Класс записей о затратах

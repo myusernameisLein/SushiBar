@@ -4,7 +4,6 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += main.cpp \
-    landlord.cpp \
     goods.cpp \
     annualreport.cpp \
     globalmethods.cpp \

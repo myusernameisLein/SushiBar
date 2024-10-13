@@ -1,7 +1,6 @@
 #ifndef SPENDINGINPUTSCREEN_H
 #define SPENDINGINPUTSCREEN_H
 
-
 #include "spendinglist.h"
 
 //Класс для ввода расходов

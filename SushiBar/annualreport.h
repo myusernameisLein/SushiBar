@@ -1,7 +1,7 @@
 #ifndef ANNUALREPORT_H
 #define ANNUALREPORT_H
 
-#include "landlord.h"
+#include "globalmethods.h"
 #include "incomeinputscreen.h"
 #include "spendinginputscreen.h"
 

@@ -13,12 +13,12 @@ setPtrsInc.erase(iter);
 }
 }
 //---------------------------------------------------------
-void IncomeList::insertIncomeList(int aptNo, string Sort, int month, float amount)
+void IncomeList::insertIncomeList(int Fprice, string Sort, int month, float amount)
 {
     iter = setPtrsInc.begin(); // Инициализация итератора
     while (iter != setPtrsInc.end()) // условие выхода
     { // если текущий объект совпадает с созданным для поиска,
-    if (aptNo == (*iter)->getAptNo())
+    if (Fprice == (*iter)->getFprice())
     { // заносим ренту в список
     (*iter)->setIncome(month, amount);
     return;
@@ -26,7 +26,7 @@ void IncomeList::insertIncomeList(int aptNo, string Sort, int month, float amoun
     else
     iter++;
     } // если не нашли строку - создаем новую
-    Income* ptIncow = new Income(aptNo, Sort);
+    Income* ptIncow = new Income(Fprice, Sort);
     ptIncow->setIncome(month, amount); // заносим в нее платеж
     setPtrsInc.push_back(ptIncow); // заносим строку в вектор
     }

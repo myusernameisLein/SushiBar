@@ -1,8 +1,7 @@
 #ifndef INCOME_H
 #define INCOME_H
 
-
-#include "landlord.h"
+#include "globalmethods.h"
 
 ////////////////////класс Income//////////////////////////
 //класс, хранящий одну табличную строку доходов (уплаченной ренты)
@@ -10,16 +9,16 @@
 class Income
 {
 private:
-    int aptNo; // апартаменты, за которые уплачено
+    int Fprice; // цена товара
     string Sort;
     float income[12]; // месяцы
     public:
     Income(int, const string& sortName); // конструктор с одним параметром
-    void setIncome(int, float); // добавить ренту за месяц
-    //сумма платежей из одной строки (плата одного жильца за все месяцы)
+    void setIncome(int, float); // добавить доход за месяц
+    //сумма доходов с 1 вида товара
     float getSumOfIncome();
-    int getAptNo(); //Запрос номера апартаментов
-    float getIncomeNo(int); //Запрос ренты за месяц int
+    int getFprice(); //Запрос цены товара
+    float getIncomeNo(int); //Запрос доходов за месяц int
     string getSortName();
 };
 

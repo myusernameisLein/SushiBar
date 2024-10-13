@@ -1,25 +1,21 @@
 #ifndef GOODS_H
 #define GOODS_H
 
-
-#include <landlord.h>
-
+#include "globalmethods.h"
 
 //////////////////// класс goods (Товары) //////////////////
-//Он хранит имя жильца и номер апартаментов, которые он арендует.
+//Он хранит имя товара и его вид.
 class goods
 {
     private:
-    string name; // Назавание товара
+    string name; // Название товара
     string sort;
-    int aptNumber; // номер апартаментов, в которых он живет
-    // здесь может быть прочая информация о жильце
-    // (телефон и т.п.)
+    int PriceNumber; // Номер цены
     public:
-   goods(string n, string s, int aNo);
+   goods(string n, string s, int pNo);
     ~goods();
-    int getAptNumber(); //возвращает номер комнаты жильца
-    string getName(); //возвращает имя жильца
+    int getPriceNumber(); //возвращает цену товара
+    string getName(); //возвращает имя товара
     string getSort(); //возвращает сорт еды
     string getSortName();
 };

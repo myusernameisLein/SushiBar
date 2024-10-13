@@ -1,9 +1,8 @@
 #ifndef ORDER_H
 #define ORDER_H
 
-#include "landlord.h"
+#include "globalmethods.h"
 #include "goods.h" // Подключаем goods.h для использования объекта goods
-
 
 class Order {
 private:

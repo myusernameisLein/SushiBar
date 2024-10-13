@@ -7,12 +7,12 @@ void IncomeInputScreen::setIncome()
     cout << "Enter sort name: ";
     getaLine(IncomeName);
     // получить номер апартаментов по имени жильца
-    aptNo = ptrgoodsList->getAptNo(IncomeName);
-    if (aptNo > 0) // если имя найдено, и такой жилец существует -
+    Fprice = ptrgoodsList->getFprice(IncomeName);
+    if (Fprice > 0) // если имя найдено, и такой жилец существует -
     { // получить сумму платежа
     cout << "Enter amount of food: " << endl;
     cin >> SumFood; // вводим ренту
-    SumFood = SumFood * aptNo;
+    SumFood = SumFood * Fprice;
     cin.ignore(80, '\n');
     cout << "Month: " << endl;
     cin >> month;
@@ -20,7 +20,7 @@ void IncomeInputScreen::setIncome()
     SF = ptrgoodsList->getSortName(IncomeName);
     month--; // (внутренняя нумерация 0-11)
      // вставляем ренту в запись об оплате
-    ptrIncomeList->insertIncomeList(aptNo, SF, month, SumFood);
+    ptrIncomeList->insertIncomeList(Fprice, SF, month, SumFood);
 }
 else
 cout << "There is no such kind of food.\n" << endl;

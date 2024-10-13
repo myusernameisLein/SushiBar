@@ -1,7 +1,6 @@
 #ifndef INCOMEINPUTSCREEN_H
 #define INCOMEINPUTSCREEN_H
 
-#include "landlord.h"
 #include "incomelist.h"
 #include <goodslist.h>
 
@@ -11,12 +10,12 @@
 class IncomeInputScreen
 {
     private:
-    goodsList* ptrgoodsList; // список жильцов
-    IncomeList* ptrIncomeList; // список записей об оплате
-    string IncomeName; // имя жильца, который платит ренту
+    goodsList* ptrgoodsList; // список товаров
+    IncomeList* ptrIncomeList; // список записей о доходах
+    string IncomeName; // имя товара
     float SumFood;
     int month; // за месяц
-    int aptNo; // по апартаментам
+    int Fprice; // Цена товара
     string SF;
     public:
     IncomeInputScreen(goodsList* ptrGD, IncomeList* ptrInc) : ptrgoodsList(ptrGD),
@@ -24,7 +23,7 @@ class IncomeInputScreen
     {
     /*тут пусто*/
     }
-    void setIncome(); // добавить арендную плату одного жильца за месяц
+    void setIncome(); // добавить доход за месяц
 };
 
 

@@ -1,9 +1,7 @@
 #ifndef GOODSLIST_H
 #define GOODSLIST_H
 
-
 #include "goods.h"
-
 
 ///////////////////класс TenantList////////////////////////
 //класс TenantList — список всех жильцов.
@@ -12,13 +10,13 @@
 class goodsList
 {
 public:
-    // установить указатели на жильцов
-    list <goods*> setPtrsgoods; // указатели на класс жильцов
+    // установить указатели на товары
+    list <goods*> setPtrsgoods; // указатели на класс товаров
     list <goods*>::iterator iter; //итератор
-    ~goodsList(); // деструктор (удаление жильцов)
-    void insertgoods(goods*); // добавить жильца в список
-    int getAptNo(string); // возвращает номер апартаментов
-    void display(); // вывод списка жильцов
+    ~goodsList(); // деструктор (удаление товаров)
+    void insertgoods(goods*); // добавить товар в список
+    int getFprice(string); // возвращает цену товара
+    void display(); // вывод списка товаров
     string getSortName(string);
     std::list<goods*>& getgoodsList() {
             return setPtrsgoods;

@@ -1,9 +1,7 @@
 #ifndef GOODSINPUTSCREEN_H
 #define GOODSINPUTSCREEN_H
 
-
 #include <goodslist.h>
-
 
 ////////////////класс TenantInputScreen////////////////////
 //класс TenantInputScreen. Это класс, отвечающий за отображение «экрана»,
@@ -14,7 +12,7 @@ class goodsInputScreen
     goodsList* ptrgoodsList;
     string tName;
     string Fsort;
-    int aptNo;
+    int Fprice;
     public:
     goodsInputScreen(goodsList* ptrGD) : ptrgoodsList(ptrGD)
     {

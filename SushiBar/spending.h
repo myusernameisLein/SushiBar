@@ -1,6 +1,8 @@
 #ifndef SPENDING_H
 #define SPENDING_H
-#include "landlord.h"
+
+#include "globalmethods.h"
+
 //Класс затрат
 class Spending
 {

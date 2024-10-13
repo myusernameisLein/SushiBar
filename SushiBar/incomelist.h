@@ -1,7 +1,6 @@
 #ifndef IncomeListLIST_H
 #define IncomeListLIST_H
 
-#include "landlord.h"
 #include "income.h"
 
 //////////////////// класс IncomeList///////////////////////

@@ -1,7 +1,6 @@
 #ifndef ORDERLIST_H
 #define ORDERLIST_H
 
-#include "landlord.h"
 #include "order.h" // Подключаем Order
 
 class OrderList {

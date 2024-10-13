@@ -1,7 +1,7 @@
-#include "income.h"
+    #include "income.h"
 
 /////////////////методы класса Income/////////////////////
-Income::Income(int an, const string& sortName) : aptNo(an), Sort(sortName) //конструктор
+Income::Income(int an, const string& sortName) : Fprice(an), Sort(sortName) //конструктор
 { //Алгоритм fill() помещает копию значения value (у нас это 0)
 //в каждый элемент диапазона, ограниченного парой итераторов [first,last).
 //Т.е. в конструкторе просто инициализируем массив значениями 0.
@@ -13,9 +13,9 @@ void Income::setIncome(int m, float am) // сеттер оплата за мес
 income[m] = am; // привязываем оплату к месяцу
 }
 //---------------------------------------------------------
-int Income::getAptNo() // геттер запрос номера апартаментов
+int Income::getFprice() // геттер запрос номера апартаментов
 {
-return aptNo;
+return Fprice;
 }
 //---------------------------------------------------------
 float Income::getIncomeNo(int month) //Геттер запрос ренты за месяц month
