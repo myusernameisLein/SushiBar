@@ -1,11 +1,17 @@
 #ifndef ORDERLIST_H
 #define ORDERLIST_H
 
+#include "landlord.h"
+#include "order.h" // Подключаем Order
 
-class orderlist
-{
+class OrderList {
+private:
+    list<Order*> orders; // Список заказов
+
 public:
-    orderlist();
+    ~OrderList(); // Деструктор
+    void addOrder(Order* order); // Метод для добавления заказа
+    void display(); // Метод для отображения всех заказов
 };
 
 #endif // ORDERLIST_H
