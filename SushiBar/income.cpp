@@ -1,4 +1,4 @@
-    #include "income.h"
+#include "income.h"
 
 /////////////////методы класса Income/////////////////////
 Income::Income(int an, const string& sortName) : Fprice(an), Sort(sortName) //конструктор

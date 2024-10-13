@@ -1,5 +1,4 @@
 #include "orderinputscreen.h"
-#include "landlord.h"
 
 OrderInputScreen::OrderInputScreen(OrderList* orderList, goodsList* goodsList)
     : ptrOrderList(orderList), ptrgoodsList(goodsList) {}

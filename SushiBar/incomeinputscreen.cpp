@@ -1,5 +1,4 @@
 #include "incomeinputscreen.h"
-#include <globalmethods.h>
 
 /////////////////методы класса IncomeInputScreen/////////////
 void IncomeInputScreen::setIncome()

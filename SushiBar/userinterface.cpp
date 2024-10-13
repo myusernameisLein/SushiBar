@@ -1,5 +1,4 @@
 #include "userinterface.h"
-#include <landlord.h>
 #include <globalmethods.h>
 
 UserInterface::UserInterface()
@@ -23,7 +22,7 @@ void UserInterface::interact()
 {
 while (true)
 {
-cout << "Input information'i', \n"
+cout << "Enter information'i', \n"
 << "Output report 'd', \n"
 << "Quit 'q': \n";
 ch = getaChar();

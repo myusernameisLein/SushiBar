@@ -1,5 +1,5 @@
 // lordApp.cpp
-#include "landlord.h"
+#include "globalmethods.h"
 #include "userinterface.h"
 
 
