@@ -1,10 +1,16 @@
-#include <iostream>
+// lordApp.cpp
+#include "landlord.h"
+#include "userinterface.h"
 
-using namespace std;
 
 int main()
 {
-    cout << "Hello World!" << endl;
+
+    setlocale(LC_ALL, "rus");
+    UserInterface theUserInterface;
+    theUserInterface.interact();
+
+    system("pause");
     return 0;
 }
 
