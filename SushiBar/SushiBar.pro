@@ -23,7 +23,6 @@ include(deployment.pri)
 qtcAddDeployment()
 
 HEADERS += \
-    landlord.h \
     goods.h \
     annualreport.h \
     globalmethods.h \
