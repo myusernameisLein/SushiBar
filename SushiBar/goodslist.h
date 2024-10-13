@@ -11,16 +11,18 @@
 // и оперирует ими при выводе
 class goodsList
 {
-    private:
+public:
     // установить указатели на жильцов
     list <goods*> setPtrsgoods; // указатели на класс жильцов
     list <goods*>::iterator iter; //итератор
-    public:
     ~goodsList(); // деструктор (удаление жильцов)
     void insertgoods(goods*); // добавить жильца в список
     int getAptNo(string); // возвращает номер апартаментов
     void display(); // вывод списка жильцов
     string getSortName(string);
+    std::list<goods*>& getgoodsList() {
+            return setPtrsgoods;
+        }
 };
 
 #endif // GOODSLIST_H

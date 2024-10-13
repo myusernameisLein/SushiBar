@@ -15,7 +15,10 @@ SOURCES += main.cpp \
     incomeinputscreen.cpp \
     spendinglist.cpp \
     spendinginputscreen.cpp \
-    userinterface.cpp
+    userinterface.cpp \
+    order.cpp \
+    orderinputscreen.cpp \
+    orderlist.cpp
 
 include(deployment.pri)
 qtcAddDeployment()
@@ -33,5 +36,8 @@ HEADERS += \
     spending.h \
     spendinglist.h \
     spendinginputscreen.h \
-    userinterface.h
+    userinterface.h \
+    order.h \
+    orderinputscreen.h \
+    orderlist.h
 

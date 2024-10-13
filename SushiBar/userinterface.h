@@ -3,7 +3,8 @@
 #include "goodslist.h"
 #include "goodsinputscreen.h"
 #include "incomeinputscreen.h"
-
+#include "orderlist.h"
+#include "orderinputscreen.h"
 #include "spendinginputscreen.h"
 #include "annualreport.h"
 //Главный класс для запуска приложения:
@@ -18,6 +19,8 @@ class UserInterface
         SpendingList* ptrSpendingList;
         SpendingInputScreen* ptrSpendingInputScreen;
         AnnualReport* ptrAnnualReport;
+        OrderList* ptrOrderList;
+        OrderInputScreen* ptrOrderInputScreen;
     char ch;
     public:
         UserInterface();
